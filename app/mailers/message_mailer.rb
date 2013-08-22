@@ -1,5 +1,6 @@
 class MessageMailer < ActionMailer::Base
   default :from => Mailboxer.default_from
+  layout "email"
   #Sends and email for indicating a new message or a reply to a receiver. 
   #It calls new_message_email if notifing a new message and reply_message_email
   #when indicating a reply to an already created conversation.
